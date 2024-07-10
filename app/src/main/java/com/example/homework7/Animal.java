@@ -1,5 +1,7 @@
 package com.example.homework7;
 
+import android.widget.ImageView;
+
 public class Animal {
     String name;
     int age;
@@ -11,9 +13,11 @@ public class Animal {
         this.phone = phone;
     }
 
+    void run (ImageView animal) {
+    }
 
+    void sitdown(ImageView animal) {}
 
-
-
+    void standup(ImageView animal) {}
 
 }

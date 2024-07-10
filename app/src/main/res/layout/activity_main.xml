@@ -12,40 +12,38 @@
         android:id="@+id/createCatBtn"
         android:layout_width="92dp"
         android:layout_height="47dp"
-        android:layout_marginStart="12dp"
         android:text="고양이만들기"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sitDownBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.758" />
 
     <Button
         android:id="@+id/standUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="48dp"
         android:text="서 있어"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sitDownBtn"
-        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintTop_toBottomOf="@+id/createDogBtn"
+        app:layout_constraintVertical_bias="0.069" />
 
     <Button
         android:id="@+id/createDogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
         android:text="강아지만들기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintBottom_toTopOf="@+id/sitDownBtn"
+        app:layout_constraintEnd_toStartOf="@+id/createCatBtn"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.762" />
 
     <Button
         android:id="@+id/sitDownBtn"
@@ -53,57 +51,120 @@
         android:layout_height="wrap_content"
         android:text="앉아"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintEnd_toStartOf="@+id/runBtn"
+        app:layout_constraintHorizontal_bias="0.803"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.203" />
 
     <Button
         android:id="@+id/runBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginEnd="48dp"
         android:text="뛰어"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintTop_toBottomOf="@+id/createCatBtn"
+        app:layout_constraintVertical_bias="0.069" />
 
-    <EditText
-        android:id="@+id/editTextTextName"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="449dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="72dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="이름"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="나이"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="전화번호"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="이름"
+        android:text="동물농장"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageView
+        android:id="@+id/outputImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="184dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintTop_toBottomOf="@+id/sitDownBtn"
+        app:layout_constraintVertical_bias="0.207"
+        app:srcCompat="@drawable/none" />
 
-    <EditText
-        android:id="@+id/editTextText3"
+    <TextView
+        android:id="@+id/outputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="나이"
+        android:layout_marginTop="32dp"
+        android:text="결과"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputImage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="446dp"
+        android:layout_height="100dp"
+        android:background="#00BCD4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/outputText"
+        app:layout_constraintVertical_bias="0.21"></LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextText5"
+    <Button
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="전화번호"
+        android:layout_marginBottom="16dp"
+        android:text="추가"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
